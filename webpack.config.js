@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const {HotModuleReplacementPlugin} = require('webpack');
 
 module.exports = {
     context: path.join(__dirname, 'src/main/view'),
@@ -42,7 +43,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'resources/css/styles.css'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new HotModuleReplacementPlugin({
+            multiStep: true
+        })
     ],
     module: {
         rules: [

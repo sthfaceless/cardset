@@ -1,7 +1,7 @@
 @import "~normalize.css";
+@import "fonts.scss";
+@import "bulma/bulma";
 
-#root{
-  h1{
-    color: lightgray;
-  }
+*{
+  font-family: 'Comfortaa', sans-serif;
 }
