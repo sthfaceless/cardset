@@ -1,12 +1,16 @@
 .navbar{
+  padding: 7px 5px;
+  margin-bottom: 0 !important;
   .navbar-brand{
+    justify-content: space-between;
+    will-change: contents;
     .project-logo{
       max-height: none;
-      height: 80px;
+      height: 60px;
     }
     .project-name{
       font-weight: 700;
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 }

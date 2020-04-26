@@ -4,15 +4,19 @@ import {StaticRouter} from "react-router";
 import {store} from "./store/store";
 import '@/css/styles.scss'
 import LayoutContainer from "@/js/layout/LayoutContainer";
+import {BrowserRouter} from "react-router-dom";
+import { hot } from 'react-hot-loader';
 
 function App(){
     return (
         <Provider store={store}>
-            <StaticRouter>
+            <BrowserRouter>
                 <LayoutContainer/>
-            </StaticRouter>
+            </BrowserRouter>
         </Provider>
     )
 }
+const app = process.env.NODE_ENV === 'development' ?
+    hot(module)(App) : App;
 
-export default App
+export default app

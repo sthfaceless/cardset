@@ -1,0 +1,27 @@
+.decks{
+  padding: 7rem;
+  &__title{
+    font-size: 3rem;
+    margin-bottom: 3rem !important;
+  }
+  &__search-field{
+    input{
+      margin-top: 1rem;
+    }
+  }
+  &__decks-elements{
+    will-change: contents;
+  }
+  &__decks-element{
+    align-items: center;
+    margin: 2rem 0;
+    transition-duration: 0.3s;
+  }
+  &__decks-element:hover{
+    transform: translateX(10px);
+  }
+  &__deck-image{
+    width: 100px;
+    border-radius: 100%;
+  }
+}
